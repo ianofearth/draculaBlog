@@ -1,3 +1,13 @@
 <h1>About Dracula</h1>
 
 <p>Count Dracula is the title character and primary antagonist of Bram Stoker's 1897 Gothic horror novel Dracula.</p>
+
+<button class="btn btn-primary" {{action 'showRealName'}}>Click here to learn Dracula's real name!</button>
+
+{{#if isPictureShowing}}
+<button class="btn btn-info" {{action 'hidePicture'}}>Hide the picture</button>
+<p><img src="http://upload.wikimedia.org/wikipedia/en/2/29/Count_von_Count_kneeling.png"
+  alt="A photo of Dracula"></p>
+{{else}}
+  <button class="btn btn-info" {{action 'showPicture'}}>Click here to see a picture</button>
+{{/if}}
